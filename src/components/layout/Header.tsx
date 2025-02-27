@@ -56,7 +56,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 animate-fade-in">
             <BookOpen className="h-6 w-6" />
-            <span className="text-xl font-bold">LMS Pro</span>
+            <span className="text-xl font-bold">Gilang LMS</span>
           </Link>
 
           {/* Desktop Navigation */}
