@@ -12,6 +12,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent } from '@/components/ui/card';
 import ProgressBar from '@/components/ui/ProgressBar';
 import UserAvatar from '@/components/ui/UserAvatar';
+import CourseCard from '@/components/ui/CourseCard';
 import { courses, userProgress, users } from '@/utils/mockData';
 import { 
   Clock, 

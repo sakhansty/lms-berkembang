@@ -2,17 +2,20 @@
 import { Link } from 'react-router-dom';
 import { Clock, Users, Star } from 'lucide-react';
 import { Course } from '@/utils/types';
+import { CSSProperties } from 'react';
 
 interface CourseCardProps {
   course: Course;
   className?: string;
+  style?: CSSProperties;
 }
 
-const CourseCard = ({ course, className = '' }: CourseCardProps) => {
+const CourseCard = ({ course, className = '', style }: CourseCardProps) => {
   return (
     <Link 
       to={`/courses/${course.id}`} 
       className={`group block rounded-lg overflow-hidden border bg-card transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${className}`}
+      style={style}
     >
       <div className="relative w-full aspect-video overflow-hidden">
         <img 
