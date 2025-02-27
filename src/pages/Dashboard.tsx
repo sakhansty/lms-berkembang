@@ -44,18 +44,18 @@ const Dashboard = () => {
         <div className="container mx-auto px-4">
           {/* Dashboard Header */}
           <div className="mb-8 animate-fade-in">
-            <h1 className="text-3xl font-bold mb-2">Welcome, {currentUser.name}</h1>
+            <h1 className="text-3xl font-bold mb-2">Selamat Datang, {currentUser.name}</h1>
             <p className="text-muted-foreground">
-              Track your progress and continue learning from where you left off.
+              Lacak kemajuan Anda dan lanjutkan pembelajaran dari tempat Anda sebelumnya.
             </p>
           </div>
           
           {/* Dashboard Tabs */}
           <Tabs value={activeTab} onValueChange={setActiveTab} className="mb-8 animate-fade-in-up">
             <TabsList>
-              <TabsTrigger value="overview">Overview</TabsTrigger>
-              <TabsTrigger value="courses">My Courses</TabsTrigger>
-              <TabsTrigger value="achievements">Achievements</TabsTrigger>
+              <TabsTrigger value="overview">Ikhtisar</TabsTrigger>
+              <TabsTrigger value="courses">Kursus Saya</TabsTrigger>
+              <TabsTrigger value="achievements">Pencapaian</TabsTrigger>
             </TabsList>
             
             {/* Overview Tab */}
@@ -64,31 +64,31 @@ const Dashboard = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
                 <Card>
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-sm font-medium">Courses in Progress</CardTitle>
+                    <CardTitle className="text-sm font-medium">Kursus dalam Progres</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="text-3xl font-bold">{userProgress.length}</div>
                     <div className="text-xs text-muted-foreground mt-1">
-                      Out of {courses.length} available courses
+                      Dari {courses.length} kursus yang tersedia
                     </div>
                   </CardContent>
                 </Card>
                 
                 <Card>
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-sm font-medium">Lessons Completed</CardTitle>
+                    <CardTitle className="text-sm font-medium">Pelajaran Selesai</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="text-3xl font-bold">{completedLessons}</div>
                     <div className="text-xs text-muted-foreground mt-1">
-                      Out of {totalLessons} total lessons
+                      Dari {totalLessons} total pelajaran
                     </div>
                   </CardContent>
                 </Card>
                 
                 <Card>
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-sm font-medium">Overall Progress</CardTitle>
+                    <CardTitle className="text-sm font-medium">Progres Keseluruhan</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="text-3xl font-bold">
@@ -107,10 +107,10 @@ const Dashboard = () => {
               {/* Continue Learning */}
               <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-xl font-semibold">Continue Learning</h2>
+                  <h2 className="text-xl font-semibold">Lanjutkan Pembelajaran</h2>
                   <Button asChild variant="ghost" size="sm" className="group">
                     <Link to="/courses" className="flex items-center">
-                      View All 
+                      Lihat Semua 
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Link>
                   </Button>
@@ -133,7 +133,7 @@ const Dashboard = () => {
                           
                           <div className="flex items-center text-sm text-muted-foreground mb-3">
                             <Clock className="h-4 w-4 mr-1" />
-                            <span>Last accessed: {new Date(course?.lastAccessed).toLocaleDateString()}</span>
+                            <span>Terakhir diakses: {new Date(course?.lastAccessed).toLocaleDateString()}</span>
                           </div>
                           
                           <ProgressBar 
@@ -145,7 +145,7 @@ const Dashboard = () => {
                           
                           <div className="mt-auto">
                             <Button asChild>
-                              <Link to={`/courses/${course?.id}`}>Continue</Link>
+                              <Link to={`/courses/${course?.id}`}>Lanjutkan</Link>
                             </Button>
                           </div>
                         </div>
@@ -157,7 +157,7 @@ const Dashboard = () => {
               
               {/* Recent Activity */}
               <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                <h2 className="text-xl font-semibold mb-6">Recent Activity</h2>
+                <h2 className="text-xl font-semibold mb-6">Aktivitas Terbaru</h2>
                 
                 <Card>
                   <CardContent className="p-6">
@@ -169,11 +169,11 @@ const Dashboard = () => {
                           </div>
                         </div>
                         <div>
-                          <p className="font-medium">Completed "HTML Structure" lesson</p>
-                          <p className="text-sm text-muted-foreground mt-1">Introduction to Web Development</p>
+                          <p className="font-medium">Menyelesaikan pelajaran "Struktur HTML"</p>
+                          <p className="text-sm text-muted-foreground mt-1">Pengantar Pengembangan Web</p>
                           <div className="flex items-center text-xs text-muted-foreground mt-2">
                             <CalendarDays className="h-3 w-3 mr-1" />
-                            <span>2 days ago</span>
+                            <span>2 hari yang lalu</span>
                           </div>
                         </div>
                       </div>
@@ -185,11 +185,11 @@ const Dashboard = () => {
                           </div>
                         </div>
                         <div>
-                          <p className="font-medium">Started "Advanced Data Science" course</p>
-                          <p className="text-sm text-muted-foreground mt-1">Enrolled in a new course</p>
+                          <p className="font-medium">Memulai kursus "Data Science Lanjutan"</p>
+                          <p className="text-sm text-muted-foreground mt-1">Mendaftar kursus baru</p>
                           <div className="flex items-center text-xs text-muted-foreground mt-2">
                             <CalendarDays className="h-3 w-3 mr-1" />
-                            <span>5 days ago</span>
+                            <span>5 hari yang lalu</span>
                           </div>
                         </div>
                       </div>
@@ -201,11 +201,11 @@ const Dashboard = () => {
                           </div>
                         </div>
                         <div>
-                          <p className="font-medium">Completed "Introduction to HTML" lesson</p>
-                          <p className="text-sm text-muted-foreground mt-1">Introduction to Web Development</p>
+                          <p className="font-medium">Menyelesaikan pelajaran "Pengantar HTML"</p>
+                          <p className="text-sm text-muted-foreground mt-1">Pengantar Pengembangan Web</p>
                           <div className="flex items-center text-xs text-muted-foreground mt-2">
                             <CalendarDays className="h-3 w-3 mr-1" />
-                            <span>1 week ago</span>
+                            <span>1 minggu yang lalu</span>
                           </div>
                         </div>
                       </div>
@@ -245,7 +245,7 @@ const Dashboard = () => {
                         
                         <Button asChild>
                           <Link to={`/courses/${course?.id}`}>
-                            {progress.percentComplete > 0 ? 'Continue' : 'Start Learning'}
+                            {progress.percentComplete > 0 ? 'Lanjutkan' : 'Mulai Belajar'}
                           </Link>
                         </Button>
                       </CardContent>
@@ -256,12 +256,12 @@ const Dashboard = () => {
               
               {/* Explore More Courses */}
               <Card className="p-6 text-center bg-secondary animate-fade-in" style={{ animationDelay: '0.4s' }}>
-                <h3 className="text-xl font-medium mb-2">Looking for more courses?</h3>
+                <h3 className="text-xl font-medium mb-2">Mencari kursus lainnya?</h3>
                 <p className="text-muted-foreground mb-4">
-                  Explore our catalog to find your next learning journey.
+                  Jelajahi katalog kami untuk menemukan perjalanan pembelajaran berikutnya.
                 </p>
                 <Button asChild>
-                  <Link to="/courses">Browse All Courses</Link>
+                  <Link to="/courses">Jelajahi Semua Kursus</Link>
                 </Button>
               </Card>
             </TabsContent>
@@ -273,12 +273,12 @@ const Dashboard = () => {
                   <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                     <BookOpen className="h-8 w-8 text-primary" />
                   </div>
-                  <h3 className="font-medium mb-1">First Course Started</h3>
+                  <h3 className="font-medium mb-1">Kursus Pertama Dimulai</h3>
                   <p className="text-sm text-muted-foreground mb-3">
-                    Started your learning journey
+                    Memulai perjalanan belajar Anda
                   </p>
                   <div className="text-xs bg-secondary rounded-full px-2 py-1 inline-block">
-                    Earned 5 days ago
+                    Diperoleh 5 hari yang lalu
                   </div>
                 </Card>
                 
@@ -286,12 +286,12 @@ const Dashboard = () => {
                   <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="h-8 w-8 text-primary" />
                   </div>
-                  <h3 className="font-medium mb-1">First Lesson Completed</h3>
+                  <h3 className="font-medium mb-1">Pelajaran Pertama Selesai</h3>
                   <p className="text-sm text-muted-foreground mb-3">
-                    Completed your first lesson
+                    Menyelesaikan pelajaran pertama Anda
                   </p>
                   <div className="text-xs bg-secondary rounded-full px-2 py-1 inline-block">
-                    Earned 4 days ago
+                    Diperoleh 4 hari yang lalu
                   </div>
                 </Card>
                 
@@ -299,12 +299,12 @@ const Dashboard = () => {
                   <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="h-8 w-8 text-muted-foreground" />
                   </div>
-                  <h3 className="font-medium mb-1">First Quiz Mastered</h3>
+                  <h3 className="font-medium mb-1">Kuis Pertama Dikuasai</h3>
                   <p className="text-sm text-muted-foreground mb-3">
-                    Score 100% on a quiz
+                    Skor 100% pada kuis
                   </p>
                   <div className="text-xs bg-secondary rounded-full px-2 py-1 inline-block">
-                    Locked
+                    Terkunci
                   </div>
                 </Card>
               </div>

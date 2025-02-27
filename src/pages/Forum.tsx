@@ -57,7 +57,7 @@ const Forum = () => {
   
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return new Intl.DateTimeFormat('en-US', { 
+    return new Intl.DateTimeFormat('id-ID', { 
       month: 'short', 
       day: 'numeric', 
       year: 'numeric',
@@ -74,9 +74,9 @@ const Forum = () => {
         <div className="container mx-auto px-4">
           {/* Page Header */}
           <div className="mb-8 animate-fade-in">
-            <h1 className="text-3xl font-bold mb-2">Discussion Forum</h1>
+            <h1 className="text-3xl font-bold mb-2">Forum Diskusi</h1>
             <p className="text-muted-foreground">
-              Connect with other students and instructors to discuss course content, ask questions, and share insights.
+              Terhubung dengan siswa dan instruktur lain untuk membahas konten kursus, mengajukan pertanyaan, dan berbagi wawasan.
             </p>
           </div>
           
@@ -86,7 +86,7 @@ const Forum = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
               <Input
                 type="text"
-                placeholder="Search discussions..."
+                placeholder="Cari diskusi..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10"
@@ -97,35 +97,35 @@ const Forum = () => {
               <DialogTrigger asChild>
                 <Button className="whitespace-nowrap">
                   <PlusCircle className="h-4 w-4 mr-2" />
-                  New Discussion
+                  Diskusi Baru
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-[550px]">
                 <DialogHeader>
-                  <DialogTitle>Start a New Discussion</DialogTitle>
+                  <DialogTitle>Mulai Diskusi Baru</DialogTitle>
                   <DialogDescription>
-                    Create a new thread to ask questions or share insights with the community.
+                    Buat thread baru untuk mengajukan pertanyaan atau berbagi wawasan dengan komunitas.
                   </DialogDescription>
                 </DialogHeader>
                 <div className="space-y-4 py-4">
                   <div className="space-y-2">
                     <label htmlFor="title" className="text-sm font-medium leading-none">
-                      Title
+                      Judul
                     </label>
                     <Input
                       id="title"
-                      placeholder="Enter a descriptive title"
+                      placeholder="Masukkan judul yang deskriptif"
                       value={newThreadTitle}
                       onChange={(e) => setNewThreadTitle(e.target.value)}
                     />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="content" className="text-sm font-medium leading-none">
-                      Content
+                      Konten
                     </label>
                     <Textarea
                       id="content"
-                      placeholder="Describe your question or discussion topic in detail"
+                      placeholder="Jelaskan pertanyaan atau topik diskusi Anda secara detail"
                       rows={6}
                       value={newThreadContent}
                       onChange={(e) => setNewThreadContent(e.target.value)}
@@ -134,10 +134,10 @@ const Forum = () => {
                 </div>
                 <DialogFooter>
                   <Button variant="outline" onClick={() => setDialogOpen(false)}>
-                    Cancel
+                    Batal
                   </Button>
                   <Button onClick={handleCreateThread} disabled={!newThreadTitle || !newThreadContent}>
-                    Post Discussion
+                    Posting Diskusi
                   </Button>
                 </DialogFooter>
               </DialogContent>
@@ -147,9 +147,9 @@ const Forum = () => {
           {/* Forum Tabs */}
           <Tabs value={activeTab} onValueChange={setActiveTab} className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             <TabsList className="mb-6">
-              <TabsTrigger value="all">All Discussions</TabsTrigger>
-              <TabsTrigger value="my-threads">My Discussions</TabsTrigger>
-              <TabsTrigger value="unanswered">Unanswered</TabsTrigger>
+              <TabsTrigger value="all">Semua Diskusi</TabsTrigger>
+              <TabsTrigger value="my-threads">Diskusi Saya</TabsTrigger>
+              <TabsTrigger value="unanswered">Belum Terjawab</TabsTrigger>
             </TabsList>
             
             <TabsContent value="all" className="animate-fade-in">
@@ -176,19 +176,19 @@ const Forum = () => {
       return (
         <div className="text-center py-16">
           <MessageSquare className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
-          <h3 className="text-xl font-medium mb-2">No discussions found</h3>
+          <h3 className="text-xl font-medium mb-2">Tidak ada diskusi yang ditemukan</h3>
           <p className="text-muted-foreground mb-6">
             {activeTab === 'my-threads' 
-              ? "You haven't started any discussions yet."
+              ? "Anda belum memulai diskusi apa pun."
               : activeTab === 'unanswered'
-                ? "There are no unanswered discussions."
-                : "No discussions match your search criteria."}
+                ? "Tidak ada diskusi yang belum terjawab."
+                : "Tidak ada diskusi yang cocok dengan kriteria pencarian Anda."}
           </p>
           <Button onClick={() => {
             setSearchQuery('');
             setDialogOpen(true);
           }}>
-            Start a New Discussion
+            Mulai Diskusi Baru
           </Button>
         </div>
       );
@@ -214,7 +214,7 @@ const Forum = () => {
                   <div>
                     <h3 className="font-medium">{thread.authorName}</h3>
                     <p className="text-xs text-muted-foreground">
-                      Posted on {formatDate(thread.date)}
+                      Diposting pada {formatDate(thread.date)}
                     </p>
                   </div>
                 </div>
@@ -224,7 +224,7 @@ const Forum = () => {
                     to={`/courses/${thread.courseId}`}
                     className="text-xs bg-secondary hover:bg-secondary/80 px-2 py-1 rounded-full"
                   >
-                    Course Discussion
+                    Diskusi Kursus
                   </Link>
                 )}
               </div>
@@ -245,22 +245,22 @@ const Forum = () => {
               <div className="flex items-center space-x-4 text-sm">
                 <div className="flex items-center">
                   <MessageSquare className="h-4 w-4 mr-1 text-muted-foreground" />
-                  <span>{thread.replies.length} {thread.replies.length === 1 ? 'reply' : 'replies'}</span>
+                  <span>{thread.replies.length} {thread.replies.length === 1 ? 'balasan' : 'balasan'}</span>
                 </div>
                 
                 <div className="flex items-center">
                   <Clock className="h-4 w-4 mr-1 text-muted-foreground" />
                   <span>
                     {thread.replies.length > 0 
-                      ? `Last reply ${formatDate(thread.replies[thread.replies.length - 1].date)}`
-                      : 'No replies yet'}
+                      ? `Balasan terakhir ${formatDate(thread.replies[thread.replies.length - 1].date)}`
+                      : 'Belum ada balasan'}
                   </span>
                 </div>
               </div>
               
               <Button asChild variant="ghost" size="sm">
                 <Link to={`/forum/${thread.id}`}>
-                  View Discussion
+                  Lihat Diskusi
                 </Link>
               </Button>
             </CardFooter>

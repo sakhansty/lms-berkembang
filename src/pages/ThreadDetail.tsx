@@ -23,7 +23,7 @@ const ThreadDetail = () => {
   // Format date
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return new Intl.DateTimeFormat('en-US', { 
+    return new Intl.DateTimeFormat('id-ID', { 
       month: 'short', 
       day: 'numeric', 
       year: 'numeric',
@@ -40,8 +40,8 @@ const ThreadDetail = () => {
     console.log('Submitting reply:', { threadId, content: replyContent });
     
     toast({
-      title: "Reply posted",
-      description: "Your response has been submitted successfully",
+      title: "Balasan diposting",
+      description: "Tanggapan Anda telah berhasil dikirim",
     });
     
     // Clear input
@@ -56,12 +56,12 @@ const ThreadDetail = () => {
         <main className="flex-grow pt-24 pb-16 flex items-center justify-center">
           <div className="text-center">
             <MessageSquare className="h-16 w-16 mx-auto text-muted-foreground mb-4" />
-            <h1 className="text-2xl font-bold mb-4">Discussion not found</h1>
+            <h1 className="text-2xl font-bold mb-4">Diskusi tidak ditemukan</h1>
             <p className="text-muted-foreground mb-8">
-              The discussion thread you're looking for doesn't exist or has been removed.
+              Diskusi yang Anda cari tidak ada atau telah dihapus.
             </p>
             <Button asChild>
-              <Link to="/forum">Back to Forum</Link>
+              <Link to="/forum">Kembali ke Forum</Link>
             </Button>
           </div>
         </main>
@@ -85,7 +85,7 @@ const ThreadDetail = () => {
           >
             <Link to="/forum" className="flex items-center">
               <ArrowLeft className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
-              Back to Forum
+              Kembali ke Forum
             </Link>
           </Button>
           
@@ -107,14 +107,14 @@ const ThreadDetail = () => {
                   <div>
                     <h3 className="font-medium">{thread.authorName}</h3>
                     <p className="text-xs text-muted-foreground">
-                      Posted on {formatDate(thread.date)}
+                      Diposting pada {formatDate(thread.date)}
                     </p>
                     {thread.courseId && (
                       <Link
                         to={`/courses/${thread.courseId}`}
                         className="text-xs bg-secondary hover:bg-secondary/80 px-2 py-1 mt-1 inline-block rounded-full"
                       >
-                        Course Discussion
+                        Diskusi Kursus
                       </Link>
                     )}
                   </div>
@@ -132,7 +132,7 @@ const ThreadDetail = () => {
           {/* Replies */}
           <div className="mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             <h2 className="text-xl font-bold mb-4">
-              Replies ({thread.replies.length})
+              Balasan ({thread.replies.length})
             </h2>
             
             {thread.replies.length > 0 ? (
@@ -156,7 +156,7 @@ const ThreadDetail = () => {
                             <div>
                               <h3 className="font-medium">{reply.authorName}</h3>
                               <p className="text-xs text-muted-foreground">
-                                Replied on {formatDate(reply.date)}
+                                Dibalas pada {formatDate(reply.date)}
                               </p>
                             </div>
                           </div>
@@ -172,15 +172,15 @@ const ThreadDetail = () => {
             ) : (
               <Card className="p-8 text-center text-muted-foreground">
                 <MessageSquare className="h-12 w-12 mx-auto opacity-50 mb-4" />
-                <p className="mb-2">No replies yet</p>
-                <p className="text-sm">Be the first to reply to this discussion</p>
+                <p className="mb-2">Belum ada balasan</p>
+                <p className="text-sm">Jadilah yang pertama membalas diskusi ini</p>
               </Card>
             )}
           </div>
           
           {/* Post Reply */}
           <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <h2 className="text-xl font-bold mb-4">Post a Reply</h2>
+            <h2 className="text-xl font-bold mb-4">Kirim Balasan</h2>
             <Card>
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
@@ -190,14 +190,14 @@ const ThreadDetail = () => {
                   />
                   <div className="flex-1 space-y-4">
                     <Textarea
-                      placeholder="Share your thoughts or provide an answer..."
+                      placeholder="Bagikan pemikiran Anda atau berikan jawaban..."
                       value={replyContent}
                       onChange={(e) => setReplyContent(e.target.value)}
                       rows={5}
                     />
                     <div className="flex justify-end">
                       <Button onClick={handleSubmitReply} disabled={!replyContent.trim()}>
-                        Submit Reply
+                        Kirim Balasan
                       </Button>
                     </div>
                   </div>

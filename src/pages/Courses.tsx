@@ -45,9 +45,9 @@ const Courses = () => {
         <div className="container mx-auto px-4">
           {/* Page Header */}
           <div className="text-center mb-10 animate-fade-in">
-            <h1 className="text-3xl font-bold mb-2">Explore Our Courses</h1>
+            <h1 className="text-3xl font-bold mb-2">Jelajahi Kursus Kami</h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Discover a wide range of courses designed to help you master new skills and advance your career.
+              Temukan berbagai kursus yang dirancang untuk membantu Anda menguasai keterampilan baru dan mengembangkan karir Anda.
             </p>
           </div>
           
@@ -58,7 +58,7 @@ const Courses = () => {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
                 <Input
                   type="text"
-                  placeholder="Search courses..."
+                  placeholder="Cari kursus..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10"
@@ -68,24 +68,24 @@ const Courses = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Select value={category} onValueChange={setCategory}>
                   <SelectTrigger className="w-[200px]">
-                    <SelectValue placeholder="Category" />
+                    <SelectValue placeholder="Kategori" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="all">All Categories</SelectItem>
-                    <SelectItem value="web">Web Development</SelectItem>
+                    <SelectItem value="all">Semua Kategori</SelectItem>
+                    <SelectItem value="web">Pengembangan Web</SelectItem>
                     <SelectItem value="data">Data Science</SelectItem>
-                    <SelectItem value="ai">Artificial Intelligence</SelectItem>
+                    <SelectItem value="ai">Kecerdasan Buatan</SelectItem>
                   </SelectContent>
                 </Select>
                 
                 <Select value={sortBy} onValueChange={setSortBy}>
                   <SelectTrigger className="w-[200px]">
-                    <SelectValue placeholder="Sort by" />
+                    <SelectValue placeholder="Urutkan berdasarkan" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="popular">Most Popular</SelectItem>
-                    <SelectItem value="rating">Highest Rated</SelectItem>
-                    <SelectItem value="title">Alphabetical</SelectItem>
+                    <SelectItem value="popular">Paling Populer</SelectItem>
+                    <SelectItem value="rating">Penilaian Tertinggi</SelectItem>
+                    <SelectItem value="title">Alfabet</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -106,11 +106,11 @@ const Courses = () => {
             </div>
           ) : (
             <div className="text-center py-12 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <h3 className="text-xl font-medium mb-2">No courses found</h3>
+              <h3 className="text-xl font-medium mb-2">Tidak ada kursus yang ditemukan</h3>
               <p className="text-muted-foreground mb-4">
-                Try adjusting your search criteria or explore our other offerings.
+                Coba sesuaikan kriteria pencarian Anda atau jelajahi penawaran kami yang lain.
               </p>
-              <Button onClick={() => setSearchQuery('')}>Clear Search</Button>
+              <Button onClick={() => setSearchQuery('')}>Hapus Pencarian</Button>
             </div>
           )}
         </div>

@@ -19,17 +19,17 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
-              Transform Your Learning Experience
+              Transformasi Pengalaman Belajar Anda
             </h1>
             <p className="text-xl text-muted-foreground mb-8 text-balance">
-              Welcome to LMS Pro, the modern learning management system designed to enhance your educational journey.
+              Selamat datang di Gilang LMS, sistem manajemen pembelajaran modern yang dirancang untuk meningkatkan perjalanan pendidikan Anda.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild size="lg" className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                <Link to="/courses">Browse Courses</Link>
+                <Link to="/courses">Jelajahi Kursus</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-                <Link to="/dashboard">My Dashboard</Link>
+                <Link to="/dashboard">Dasbor Saya</Link>
               </Button>
             </div>
           </div>
@@ -39,16 +39,16 @@ const Index = () => {
       {/* Features Section */}
       <section className="py-16 bg-secondary">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Choose LMS Pro?</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Mengapa Memilih Gilang LMS?</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-card p-6 rounded-lg border shadow-sm hover-lift animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <div className="rounded-full w-12 h-12 bg-primary/10 flex items-center justify-center mb-4">
                 <BookOpen className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-medium mb-2">Comprehensive Courses</h3>
+              <h3 className="text-xl font-medium mb-2">Kursus Komprehensif</h3>
               <p className="text-muted-foreground">
-                Access a wide range of high-quality courses designed by industry experts to help you master new skills.
+                Akses berbagai kursus berkualitas tinggi yang dirancang oleh pakar industri untuk membantu Anda menguasai keterampilan baru.
               </p>
             </div>
             
@@ -56,9 +56,9 @@ const Index = () => {
               <div className="rounded-full w-12 h-12 bg-primary/10 flex items-center justify-center mb-4">
                 <BarChart className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-medium mb-2">Progress Tracking</h3>
+              <h3 className="text-xl font-medium mb-2">Pelacakan Kemajuan</h3>
               <p className="text-muted-foreground">
-                Monitor your learning journey with detailed analytics and track your progress in real-time.
+                Pantau perjalanan belajar Anda dengan analitik terperinci dan lacak kemajuan Anda secara real-time.
               </p>
             </div>
             
@@ -66,9 +66,9 @@ const Index = () => {
               <div className="rounded-full w-12 h-12 bg-primary/10 flex items-center justify-center mb-4">
                 <MessageSquare className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-medium mb-2">Interactive Discussions</h3>
+              <h3 className="text-xl font-medium mb-2">Diskusi Interaktif</h3>
               <p className="text-muted-foreground">
-                Engage with instructors and peers through our dynamic forums to enhance your learning experience.
+                Berinteraksi dengan instruktur dan rekan melalui forum dinamis kami untuk meningkatkan pengalaman belajar Anda.
               </p>
             </div>
           </div>
@@ -79,10 +79,10 @@ const Index = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl font-bold">Featured Courses</h2>
+            <h2 className="text-3xl font-bold">Kursus Unggulan</h2>
             <Button asChild variant="ghost" className="group">
               <Link to="/courses" className="flex items-center">
-                View All 
+                Lihat Semua 
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
@@ -106,18 +106,18 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <div className="text-4xl font-bold mb-2">10,000+</div>
-              <div className="text-muted-foreground">Students Enrolled</div>
+              <div className="text-4xl font-bold mb-2">10.000+</div>
+              <div className="text-muted-foreground">Siswa Terdaftar</div>
             </div>
             
             <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <div className="text-4xl font-bold mb-2">150+</div>
-              <div className="text-muted-foreground">Expert Instructors</div>
+              <div className="text-muted-foreground">Instruktur Ahli</div>
             </div>
             
             <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <div className="text-4xl font-bold mb-2">500+</div>
-              <div className="text-muted-foreground">Courses Available</div>
+              <div className="text-muted-foreground">Kursus Tersedia</div>
             </div>
           </div>
         </div>
@@ -126,7 +126,7 @@ const Index = () => {
       {/* Testimonials */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">What Our Students Say</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Apa Kata Siswa Kami</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-card p-6 rounded-lg border shadow-sm animate-fade-in" style={{ animationDelay: '0.1s' }}>
@@ -141,11 +141,11 @@ const Index = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Emily Johnson</h4>
-                  <p className="text-sm text-muted-foreground">Web Development Student</p>
+                  <p className="text-sm text-muted-foreground">Siswa Pengembangan Web</p>
                 </div>
               </div>
               <p className="text-muted-foreground italic">
-                "LMS Pro has completely transformed my learning experience. The courses are well-structured and the instructors are incredibly knowledgeable. I've learned more in 3 months than I did in a year of self-study."
+                "Gilang LMS telah benar-benar mengubah pengalaman belajar saya. Kursus-kursusnya terstruktur dengan baik dan instrukturnya sangat berpengetahuan. Saya belajar lebih banyak dalam 3 bulan daripada yang saya lakukan dalam setahun belajar mandiri."
               </p>
             </div>
             
@@ -161,11 +161,11 @@ const Index = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">David Chen</h4>
-                  <p className="text-sm text-muted-foreground">Data Science Student</p>
+                  <p className="text-sm text-muted-foreground">Siswa Data Science</p>
                 </div>
               </div>
               <p className="text-muted-foreground italic">
-                "The progress tracking features have been invaluable in keeping me motivated. I can clearly see how far I've come and what I still need to learn. The discussion forums are also great for getting help."
+                "Fitur pelacakan kemajuan sangat berharga dalam menjaga motivasi saya. Saya dapat dengan jelas melihat seberapa jauh saya telah berkembang dan apa yang masih perlu saya pelajari. Forum diskusi juga bagus untuk mendapatkan bantuan."
               </p>
             </div>
             
@@ -181,11 +181,11 @@ const Index = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Sarah Miller</h4>
-                  <p className="text-sm text-muted-foreground">UX Design Student</p>
+                  <p className="text-sm text-muted-foreground">Siswa Desain UX</p>
                 </div>
               </div>
               <p className="text-muted-foreground italic">
-                "As someone transitioning careers, LMS Pro has been an incredible resource. The courses are comprehensive and practical, and the community support has been amazing. I now feel confident in my new skills."
+                "Sebagai seseorang yang beralih karir, Gilang LMS telah menjadi sumber yang luar biasa. Kursus-kursusnya komprehensif dan praktis, dan dukungan komunitasnya luar biasa. Saya sekarang merasa percaya diri dengan keterampilan baru saya."
               </p>
             </div>
           </div>
@@ -195,12 +195,12 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 animate-fade-in">Ready to Start Learning?</h2>
+          <h2 className="text-3xl font-bold mb-6 animate-fade-in">Siap Mulai Belajar?</h2>
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            Join thousands of students who are already transforming their careers with LMS Pro
+            Bergabunglah dengan ribuan siswa yang telah mengubah karir mereka dengan Gilang LMS
           </p>
           <Button asChild size="lg" variant="secondary" className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <Link to="/courses">Get Started Today</Link>
+            <Link to="/courses">Mulai Hari Ini</Link>
           </Button>
         </div>
       </section>

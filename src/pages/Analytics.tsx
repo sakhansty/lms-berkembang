@@ -72,9 +72,9 @@ const Analytics = () => {
         <div className="container mx-auto px-4">
           {/* Page Header */}
           <div className="mb-8 animate-fade-in">
-            <h1 className="text-3xl font-bold mb-2">Analytics Dashboard</h1>
+            <h1 className="text-3xl font-bold mb-2">Dasbor Analitik</h1>
             <p className="text-muted-foreground">
-              Monitor platform performance and track educational metrics.
+              Pantau kinerja platform dan lacak metrik pendidikan.
             </p>
           </div>
           
@@ -82,7 +82,7 @@ const Analytics = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 animate-fade-in-up">
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium">Active Students</CardTitle>
+                <CardTitle className="text-sm font-medium">Siswa Aktif</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center justify-between">
@@ -91,7 +91,7 @@ const Analytics = () => {
                     <div className="text-xs text-muted-foreground mt-1 flex items-center">
                       <ArrowUpRight className="h-3 w-3 mr-1 text-green-500" />
                       <span className="text-green-500 font-medium">12%</span>
-                      <span className="ml-1">from last month</span>
+                      <span className="ml-1">dari bulan lalu</span>
                     </div>
                   </div>
                   <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center">
@@ -103,7 +103,7 @@ const Analytics = () => {
             
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium">Active Courses</CardTitle>
+                <CardTitle className="text-sm font-medium">Kursus Aktif</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center justify-between">
@@ -112,7 +112,7 @@ const Analytics = () => {
                     <div className="text-xs text-muted-foreground mt-1 flex items-center">
                       <ArrowUpRight className="h-3 w-3 mr-1 text-green-500" />
                       <span className="text-green-500 font-medium">3%</span>
-                      <span className="ml-1">from last month</span>
+                      <span className="ml-1">dari bulan lalu</span>
                     </div>
                   </div>
                   <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center">
@@ -124,7 +124,7 @@ const Analytics = () => {
             
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium">Completion Rate</CardTitle>
+                <CardTitle className="text-sm font-medium">Tingkat Penyelesaian</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center justify-between">
@@ -133,7 +133,7 @@ const Analytics = () => {
                     <div className="text-xs text-muted-foreground mt-1 flex items-center">
                       <ArrowUpRight className="h-3 w-3 mr-1 text-green-500" />
                       <span className="text-green-500 font-medium">5%</span>
-                      <span className="ml-1">from last month</span>
+                      <span className="ml-1">dari bulan lalu</span>
                     </div>
                   </div>
                   <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center">
@@ -145,7 +145,7 @@ const Analytics = () => {
             
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium">Average Session Time</CardTitle>
+                <CardTitle className="text-sm font-medium">Waktu Sesi Rata-rata</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center justify-between">
@@ -154,7 +154,7 @@ const Analytics = () => {
                     <div className="text-xs text-muted-foreground mt-1 flex items-center">
                       <ArrowDownRight className="h-3 w-3 mr-1 text-red-500" />
                       <span className="text-red-500 font-medium">3%</span>
-                      <span className="ml-1">from last month</span>
+                      <span className="ml-1">dari bulan lalu</span>
                     </div>
                   </div>
                   <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center">
@@ -168,9 +168,9 @@ const Analytics = () => {
           {/* Charts Section */}
           <Tabs value={activeTab} onValueChange={setActiveTab} className="animate-fade-in-up">
             <TabsList className="mb-8">
-              <TabsTrigger value="overview">Overview</TabsTrigger>
-              <TabsTrigger value="engagement">Engagement</TabsTrigger>
-              <TabsTrigger value="courses">Courses</TabsTrigger>
+              <TabsTrigger value="overview">Ikhtisar</TabsTrigger>
+              <TabsTrigger value="engagement">Keterlibatan</TabsTrigger>
+              <TabsTrigger value="courses">Kursus</TabsTrigger>
             </TabsList>
             
             {/* Overview Tab */}
@@ -179,8 +179,8 @@ const Analytics = () => {
                 {/* Course Enrollments */}
                 <Card className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
                   <CardHeader>
-                    <CardTitle>Course Enrollments</CardTitle>
-                    <CardDescription>Top courses by student enrollment</CardDescription>
+                    <CardTitle>Pendaftaran Kursus</CardTitle>
+                    <CardDescription>Kursus teratas berdasarkan pendaftaran siswa</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="h-80">
@@ -203,8 +203,8 @@ const Analytics = () => {
                 {/* Completion Rate Trend */}
                 <Card className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
                   <CardHeader>
-                    <CardTitle>Completion Rate Trend</CardTitle>
-                    <CardDescription>Course completion rate over time</CardDescription>
+                    <CardTitle>Tren Tingkat Penyelesaian</CardTitle>
+                    <CardDescription>Tingkat penyelesaian kursus dari waktu ke waktu</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="h-80">
@@ -235,8 +235,8 @@ const Analytics = () => {
                 {/* Course Category Distribution */}
                 <Card className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
                   <CardHeader>
-                    <CardTitle>Course Categories</CardTitle>
-                    <CardDescription>Distribution by subject area</CardDescription>
+                    <CardTitle>Kategori Kursus</CardTitle>
+                    <CardDescription>Distribusi berdasarkan bidang subjek</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="h-80">
@@ -267,8 +267,8 @@ const Analytics = () => {
                 {/* Recent Activity */}
                 <Card className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
                   <CardHeader>
-                    <CardTitle>Recent Activity</CardTitle>
-                    <CardDescription>Latest platform events</CardDescription>
+                    <CardTitle>Aktivitas Terbaru</CardTitle>
+                    <CardDescription>Peristiwa terbaru platform</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-5">
@@ -284,13 +284,13 @@ const Analytics = () => {
                           <div className="ml-4">
                             <p className="font-medium">
                               {activity.userName} 
-                              {activity.type === 'enrollment' && ' enrolled in '}
-                              {activity.type === 'completion' && ' completed '}
-                              {activity.type === 'forum' && ' posted in the forum'}
+                              {activity.type === 'enrollment' && ' mendaftar di '}
+                              {activity.type === 'completion' && ' menyelesaikan '}
+                              {activity.type === 'forum' && ' memposting di forum'}
                               {activity.courseTitle && activity.courseTitle}
                             </p>
                             <p className="text-sm text-muted-foreground mt-1">
-                              {new Date(activity.date).toLocaleString()}
+                              {new Date(activity.date).toLocaleString('id-ID')}
                             </p>
                           </div>
                         </div>
@@ -306,12 +306,12 @@ const Analytics = () => {
               <div className="grid grid-cols-1 gap-8">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Student Engagement</CardTitle>
-                    <CardDescription>Weekly active users and session metrics</CardDescription>
+                    <CardTitle>Keterlibatan Siswa</CardTitle>
+                    <CardDescription>Pengguna aktif mingguan dan metrik sesi</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <p className="text-center text-muted-foreground my-16">
-                      Detailed engagement analytics will be available in a future update.
+                      Analitik keterlibatan detail akan tersedia dalam pembaruan mendatang.
                     </p>
                   </CardContent>
                 </Card>
@@ -323,12 +323,12 @@ const Analytics = () => {
               <div className="grid grid-cols-1 gap-8">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Course Performance</CardTitle>
-                    <CardDescription>Detailed metrics by course</CardDescription>
+                    <CardTitle>Kinerja Kursus</CardTitle>
+                    <CardDescription>Metrik detail berdasarkan kursus</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <p className="text-center text-muted-foreground my-16">
-                      Detailed course analytics will be available in a future update.
+                      Analitik kursus detail akan tersedia dalam pembaruan mendatang.
                     </p>
                   </CardContent>
                 </Card>

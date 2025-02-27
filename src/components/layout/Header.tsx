@@ -71,7 +71,7 @@ const Header = () => {
             >
               <span className="flex items-center space-x-2">
                 <Home className="h-4 w-4" />
-                <span>Home</span>
+                <span>Beranda</span>
               </span>
             </Link>
             <Link 
@@ -84,7 +84,7 @@ const Header = () => {
             >
               <span className="flex items-center space-x-2">
                 <User className="h-4 w-4" />
-                <span>Dashboard</span>
+                <span>Dasbor</span>
               </span>
             </Link>
             <Link 
@@ -97,7 +97,7 @@ const Header = () => {
             >
               <span className="flex items-center space-x-2">
                 <BookOpen className="h-4 w-4" />
-                <span>Courses</span>
+                <span>Kursus</span>
               </span>
             </Link>
             <Link 
@@ -123,7 +123,7 @@ const Header = () => {
             >
               <span className="flex items-center space-x-2">
                 <BarChart className="h-4 w-4" />
-                <span>Analytics</span>
+                <span>Analitik</span>
               </span>
             </Link>
           </nav>
@@ -144,15 +144,15 @@ const Header = () => {
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-56">
-                <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                <DropdownMenuLabel>Akun Saya</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem className="cursor-pointer">
                   <User className="mr-2 h-4 w-4" />
-                  <span>Profile</span>
+                  <span>Profil</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
                   <LogOut className="mr-2 h-4 w-4" />
-                  <span>Log out</span>
+                  <span>Keluar</span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -186,7 +186,7 @@ const Header = () => {
             >
               <span className="flex items-center space-x-2">
                 <Home className="h-4 w-4" />
-                <span>Home</span>
+                <span>Beranda</span>
               </span>
             </Link>
             <Link 
@@ -199,7 +199,7 @@ const Header = () => {
             >
               <span className="flex items-center space-x-2">
                 <User className="h-4 w-4" />
-                <span>Dashboard</span>
+                <span>Dasbor</span>
               </span>
             </Link>
             <Link 
@@ -212,7 +212,7 @@ const Header = () => {
             >
               <span className="flex items-center space-x-2">
                 <BookOpen className="h-4 w-4" />
-                <span>Courses</span>
+                <span>Kursus</span>
               </span>
             </Link>
             <Link 
@@ -238,7 +238,7 @@ const Header = () => {
             >
               <span className="flex items-center space-x-2">
                 <BarChart className="h-4 w-4" />
-                <span>Analytics</span>
+                <span>Analitik</span>
               </span>
             </Link>
           </div>
