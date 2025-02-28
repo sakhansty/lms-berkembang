@@ -14,36 +14,21 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero Section with enhanced 3D gradient background */}
-      <section className="relative pt-28 pb-16 md:pt-32 md:pb-24 px-4 overflow-hidden">
-        {/* 3D Gradient Background */}
-        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-purple-600 via-indigo-500 to-blue-600 opacity-90"></div>
-        
-        {/* 3D Gradient overlay with animation */}
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.2),transparent_40%)]"></div>
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.15),transparent_30%)]"></div>
-        
-        {/* Animated subtle waves */}
-        <div className="absolute inset-0 -z-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI1NzYiIHZpZXdCb3g9IjAgMCAxNDQwIDU3NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTQ0MCA2OS42NTIzQzEzNjAgNTYuNzY5OCAxMTIwIDExLjY3NDggOTYwIDExLjY3NDhDODAwIDExLjY3NDggNTQwIDU2Ljk3NjYgNDgwIDU2Ljk3NjZDNDIwIDU2Ljk3NjYgMCAyNS40MzEzIDAgMjUuNDMxM1Y1NzZIMTQ0MFY2OS42NTIzWiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyXzQ0Ml82OCkiLz48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXJfNDQyXzY4IiB4MT0iNzIwIiB5MT0iLTQ0LjI1NzgiIHgyPSI3MjAiIHkyPSI1NzYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLWNvbG9yPSJ3aGl0ZSIgc3RvcC1vcGFjaXR5PSIwLjA1Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSJ3aGl0ZSIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PC9zdmc+')]"></div>
-        
-        {/* Animated glowing orbs */}
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-1/4 right-1/3 w-80 h-80 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
-        
-        <div className="container mx-auto relative">
+      {/* Hero Section */}
+      <section className="pt-28 pb-16 md:pt-32 md:pb-24 px-4">
+        <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance text-white drop-shadow-md">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
               Transformasi Pengalaman Belajar Anda
             </h1>
-            <p className="text-xl text-white/90 mb-8 text-balance drop-shadow">
+            <p className="text-xl text-muted-foreground mb-8 text-balance">
               Selamat datang di Gilang LMS, sistem manajemen pembelajaran modern yang dirancang untuk meningkatkan perjalanan pendidikan Anda.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button asChild size="lg" className="bg-white text-purple-700 hover:bg-white/90 hover:text-purple-800 animate-fade-in-up shadow-lg" style={{ animationDelay: '0.2s' }}>
+              <Button asChild size="lg" className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                 <Link to="/courses">Jelajahi Kursus</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10 animate-fade-in-up shadow-lg" style={{ animationDelay: '0.4s' }}>
+              <Button asChild variant="outline" size="lg" className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                 <Link to="/dashboard">Dasbor Saya</Link>
               </Button>
             </div>
